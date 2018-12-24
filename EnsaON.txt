@@ -1,0 +1,27 @@
+BUENOS
+
+HOLA AND B
+AND (D)
+AND 05H
+and a
+and 77h
+and (a)
+
+
+MALOS
+
+AND (55H)
+AND (99)
+AND 54FFh
+AND O
+AND AB
+and
+and 473.456
+and .85
+and 5
+and M3H
+AND ()
+and (j)
+and %++-
+
+

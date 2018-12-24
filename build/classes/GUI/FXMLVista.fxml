@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane fx:id="tabs" layoutY="-3.0" prefHeight="600.0" prefWidth="1100.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="TabBienvenido" closable="false" text="BIENVENIDO">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff69" height="600.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1071.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff82" height="57.0" layoutX="141.0" layoutY="447.0" stroke="TRANSPARENT" strokeType="INSIDE" width="269.0" />
+                        <Button fx:id="cargarTextoB" layoutX="160.0" layoutY="459.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="232.0" text="CARGAR ARCHIVO TEXTO" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff82" height="57.0" layoutX="626.0" layoutY="444.0" stroke="TRANSPARENT" strokeType="INSIDE" width="257.0" />
+                        <Label layoutX="363.0" layoutY="163.0" text="BIENVENIDO">
+                           <font>
+                              <Font size="60.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="158.0" layoutY="271.0" text="Este programa es un emulador del Microprocesador Z80&#10;&#10;Puede empezar al dar click en el boton de  cargar un archivo de texto,&#10;Tambien puede conocer mas acerca de este proyecto dar click al boton de Informacion Adicional " textAlignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="infoAdicionalB" layoutX="639.0" layoutY="456.0" mnemonicParsing="false" text="INFORMACION ADICIONAL" />
+                        <ImageView fitHeight="138.0" fitWidth="154.0" layoutX="472.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/crearlogogratis_1024x1024_01.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="TabOpciones" closable="false" text="OPCIONES">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#69ff1f4c" height="603.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1071.0" />
+                        <Label layoutX="58.0" layoutY="196.0" prefHeight="187.0" prefWidth="958.0" text="Aqui puedes escoger el modo de ejecucion del programa.&#10;&#10;Si desea ver el resultado  sin ver el procesamiento interno de click en el boton de Resultado,&#10;de lo contrario presione Procesamiento completo para evidenciar la arquitectura interna &#10;del Z80 en funcionamiento" textAlignment="JUSTIFY">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3ef01f6d" height="62.0" layoutX="162.0" layoutY="439.0" stroke="TRANSPARENT" strokeType="INSIDE" width="207.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3ef01f6d" height="62.0" layoutX="663.0" layoutY="442.0" stroke="TRANSPARENT" strokeType="INSIDE" width="207.0" />
+                        <Button fx:id="soloResultasoB" layoutX="207.0" layoutY="453.0" mnemonicParsing="false" text="RESULTADO" />
+                        <Button fx:id="procesoB" layoutX="687.0" layoutY="456.0" mnemonicParsing="false" text="PROCESAMIENTO" />
+                        <Label layoutX="244.0" layoutY="98.0" text="OPCIONES PROCESAMIENTO">
+                           <font>
+                              <Font size="42.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="TabProceso" closable="false" text="PROCESO">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#daff1f53" height="603.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1072.0" />
+                        <ImageView fitHeight="485.0" fitWidth="757.0" layoutX="19.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/1024px-Z80_arch.svg.png" />
+                           </image>
+                        </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="337.0" layoutX="871.0" layoutY="119.0" stroke="BLACK" strokeType="INSIDE" width="136.0" />
+                        <Label layoutX="922.0" layoutY="272.0" text="Z80">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8ff1f76" height="68.0" layoutX="83.0" layoutY="498.0" stroke="TRANSPARENT" strokeType="INSIDE" width="255.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8ff1f76" height="68.0" layoutX="530.0" layoutY="498.0" stroke="TRANSPARENT" strokeType="INSIDE" width="255.0" />
+                        <Button fx:id="cancelarEjecB" layoutX="112.0" layoutY="515.0" mnemonicParsing="false" text="CANCELAR EJECUCIÓN" />
+                        <Button fx:id="sigInstrucB" layoutX="562.0" layoutY="515.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="192.0" text="SIGUIENTE INSTRUCCION" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="TabResultado" text="RESULTADO">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#931fff4e" height="603.0" stroke="#00000002" strokeType="INSIDE" width="1072.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="TabInfo" text="INFORMACION ADICIONAL">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffc31f6a" height="606.0" stroke="BLACK" strokeType="INSIDE" width="1072.0" />
+                        <Label layoutX="258.0" layoutY="70.0" text="INFORMACION ADICIONAL">
+                           <font>
+                              <Font size="46.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="111.0" layoutY="166.0" text="Este programa fue creado para el Parcial 2 de la materia Lenguajes de Programacion&#10;2018-II. Es un simulador de la arquitectura del microprocesador Z80 la cual emula sus&#10;funciones y es capaz de reconocer un archivo en lenguaje ensamblador valido para &#10;procesarlo y producir la respuesta correcta.&#10;Autora: &#10;&#10;Diana Carolina Guarín Angulo&#10;Estudiante de Ingenieria de Sistemas y Computación&#10;Universidad Nacional de Colombia&#10;">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffc71f82" height="80.0" layoutX="369.0" layoutY="485.0" stroke="TRANSPARENT" strokeType="INSIDE" width="339.0" />
+                        <Button fx:id="volverPrincB" layoutX="432.0" layoutY="497.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="214.0" text="VOLVER A LA PANTALLA&#10;PRINCIPAL" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
