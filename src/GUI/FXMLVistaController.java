@@ -5,8 +5,17 @@
  */
 package GUI;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileSystemView;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -19,12 +28,31 @@ import Emulador.*;
 public class FXMLVistaController implements Initializable {
     
     @FXML
-    private Label label;
-    
-    @FXML
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
-        label.setText("Hello World!");
+        JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+
+		int returnValue = jfc.showOpenDialog(null);
+		// int returnValue = jfc.showSaveDialog(null);
+
+		if (returnValue == JFileChooser.APPROVE_OPTION) {
+			File selectedFile = jfc.getSelectedFile();
+			System.out.println(selectedFile.getAbsolutePath());
+			try {
+				BufferedReader br = new BufferedReader(new FileReader(selectedFile));
+				String line = null;
+				 while ((line = br.readLine()) != null) {
+				   System.out.println(line);
+				 }
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				System.out.println("File not found");
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
     }
     
     @Override

@@ -35,24 +35,8 @@ public class Z80Interfaz extends Application {
      */
     public static void main(String[] args) {
         
-        
-       Ensamblador e = new Ensamblador();
-        Scanner s = new Scanner(System.in);
-        System.out.print("Digite Nombre archivo .txt:");
-        String fileName = s.nextLine();
-        if(fileName.endsWith(".txt")){
-        if(fileName != null){
-        e.readFile(fileName);
-        }else{
-            System.out.println("NO DIGITO NINGUN NOMBRE");
-            System.exit(-1);
-        }
-        }else{
-        System.out.println("EL ARCHIVO NO EXISTE O NO ES .txt!");
-            System.exit(-1);
-        }
-               
-//launch(args);
+       
+    	launch(args);
     }
 
 }
