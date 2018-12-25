@@ -14,6 +14,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.filechooser.FileSystemView;
 
 import javafx.event.ActionEvent;
@@ -31,6 +32,11 @@ public class FXMLVistaController implements Initializable {
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
         JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+        jfc.setDialogTitle("Select an text file");
+        jfc.setAcceptAllFileFilterUsed(false);
+		FileNameExtensionFilter filter = new FileNameExtensionFilter("Text files", "txt");
+		jfc.addChoosableFileFilter(filter);
+
 
 		int returnValue = jfc.showOpenDialog(null);
 		// int returnValue = jfc.showSaveDialog(null);
